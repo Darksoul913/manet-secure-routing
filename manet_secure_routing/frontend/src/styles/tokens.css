@@ -1,0 +1,85 @@
+:root {
+  /* Surfaces */
+  --bg-app: #eef2f5;
+  --bg-workspace: #e8eef2;
+  --surface: #f8fafb;
+  --surface-raised: #ffffff;
+  --surface-inset: #e3eaf0;
+  --border: #d5dfe6;
+  --border-strong: #b8c9d4;
+
+  /* Text */
+  --text: #172633;
+  --text-2: #526779;
+  --text-muted: #778b9a;
+  --text-disabled: #9aaab5;
+
+  /* Accents */
+  --teal: #087f8c;
+  --teal-dark: #08636d;
+  --aqua: #43bdb6;
+  --cobalt: #355cc9;
+  --indigo: #5966a9;
+  --violet: #7967b5;
+
+  /* Semantic */
+  --ok: #16836c;
+  --warn: #b7791f;
+  --crit: #c64d4d;
+  --info: #355cc9;
+
+  /* Tints */
+  --tint-teal: #dcefeb;
+  --tint-blue: #e1e9f9;
+  --tint-amber: #f6ebd7;
+  --tint-crit: #f6e2e1;
+  --tint-violet: #ebe6f7;
+
+  /* Topology field */
+  --field: #f3f6f8;
+  --field-grid: #dfe7ed;
+  --field-grid-major: #cbd8e1;
+  --node-relay: #4f7396;
+  --edge: #b6c6d2;
+
+  /* Chart series: validated categorical order (dataviz validator, light, surface #F8FAFB) */
+  --s-hcdso: #00939f;
+  --s-dso: #355cc9;
+  --s-coa: #cc5fa0;
+  --s-poa: #7d5fc9;
+  --s-bco: #6a8f1f;
+
+  /* Type */
+  --font: "Geist Variable", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "Geist Mono Variable", ui-monospace, "SF Mono", Menlo, monospace;
+  --fs-xs: 11.5px;
+  --fs-sm: 12.5px;
+  --fs-md: 13.5px;
+  --fs-lg: 15px;
+  --fs-xl: 19px;
+  --fs-2xl: 24px;
+
+  /* Shape & depth */
+  --r-sm: 4px;
+  --r-md: 6px;
+  --r-lg: 10px;
+  --shadow-raised: 0 1px 2px rgba(23, 38, 51, 0.06), 0 8px 24px -12px rgba(23, 38, 51, 0.18);
+  --shadow-pop: 0 2px 6px rgba(23, 38, 51, 0.08), 0 18px 40px -16px rgba(23, 38, 51, 0.28);
+  --focus: 0 0 0 2px var(--surface-raised), 0 0 0 4px var(--teal);
+
+  /* Motion */
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --t-fast: 140ms;
+  --t-med: 240ms;
+
+  --rail-w: 232px;
+  --rail-w-collapsed: 60px;
+  --topbar-h: 56px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --t-fast: 0ms;
+    --t-med: 0ms;
+  }
+}

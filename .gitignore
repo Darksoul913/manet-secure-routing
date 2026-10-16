@@ -1,0 +1,18 @@
+__pycache__/
+*.pyc
+.DS_Store
+
+# Raw datasets are large (CICIDS2017 files exceed GitHub's 100 MB limit): fetch with datasets/download.py
+manet_secure_routing/datasets/raw/
+
+# Machine-specific run state
+manet_secure_routing/results/logs/
+manet_secure_routing/results/runs.json
+
+# Frontend: dist/ IS committed so the team can run without Node
+manet_secure_routing/frontend/node_modules/
+
+# Personal notes
+CNT_CP.md
+ui.txt
+*.tsbuildinfo

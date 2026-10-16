@@ -1,0 +1,40 @@
+network:
+  n_nodes: 50
+  area: 800              # metres, square side
+  radio_range: 250       # metres
+  n_destinations: 5
+  malicious_fraction: 0.15
+  attack_drop_prob:      # probability a malicious relay drops a packet
+    blackhole: 1.0
+    grayhole: 0.5
+
+mobility:                # Gauss-Markov
+  mean_speed: 10         # m/s
+  speed_std: 2
+  direction_std: 0.5     # rad
+  alpha: 0.75            # memory (0 = random walk, 1 = straight line)
+
+traffic:
+  packet_bits: 4096      # 512-byte packets
+  bitrate: 2000000        # bit/s
+  packet_rate: 200       # packets/s from the source
+  epoch_ms: 100          # route is recomputed every epoch
+  contention: 0.1        # queueing delay per neighbour, in transmission times
+  edge_loss: 0.5         # link loss at the edge of radio range
+
+ids:
+  flows_per_node: 20     # flows each node emits per epoch for the IDS
+  threshold: 0.5         # mean attack probability above which a node is isolated
+
+optimizer:
+  pop_size: 30
+  iters: 40
+  stall_limit: 5         # HCDSO forces a COA/DSO switch after this many non-improving iterations
+
+fitness:
+  weights:
+    energy: 0.2
+    delay: 0.2
+    hops: 0.2
+    reliability: 0.4
+  unreachable_penalty: 10

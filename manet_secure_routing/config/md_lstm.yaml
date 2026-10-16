@@ -1,0 +1,28 @@
+seed: 42
+
+split:
+  val: 0.15
+  test: 0.15
+
+# Stratified row cap per dataset after cleaning (null = use everything).
+max_samples:
+  cicids2017: 300000
+  nsl_kdd: null
+  kdd99: null
+
+model:
+  conv_channels: 16      # per branch
+  kernels: [3, 5, 7]     # multi-scale receptive fields
+  hidden: 64
+  dilations: [1, 2, 4]   # one dilated LSTM layer per entry
+  dropout: 0.3
+
+training:
+  batch_size: 512
+  epochs: 15
+  lr: 0.001
+  patience: 3            # early stopping on validation loss
+
+baselines:
+  dnn_hidden: 128
+  lstm_hidden: 64
